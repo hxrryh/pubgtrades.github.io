@@ -15,8 +15,8 @@ body {
 #header {
     font-family: 'Inconsolata', monospace;
     font-size: 500%;
-    color: white;
-    -webkit-text-stroke: 3px black;
+    color: red;
+    -webkit-text-stroke: 3px white;
 }
 
 #main {
