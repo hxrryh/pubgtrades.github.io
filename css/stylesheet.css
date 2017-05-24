@@ -16,7 +16,7 @@ body {
     font-family: 'Inconsolata', monospace;
     font-size: 500%;
     color: red;
-    -webkit-text-stroke: 3px white;
+    -webkit-text-stroke: 2px white;
 }
 
 #main {
