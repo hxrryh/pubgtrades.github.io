@@ -43,6 +43,6 @@ body {
     border-right: 1px solid white;
 }
 
-#menu > li:last {
+#menu:last-child {
     border-right: none;
 }
