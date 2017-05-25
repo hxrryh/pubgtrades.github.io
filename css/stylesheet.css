@@ -39,6 +39,7 @@ body {
 }
 
 #menu > li {
+    font-family: 'Arial Black', sans-serif;
     display: inline;
     padding-right: 5px;
     border-right: 1px solid white;
