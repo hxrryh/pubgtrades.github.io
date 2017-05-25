@@ -40,4 +40,9 @@ body {
 
 #menu > li {
     display: inline;
+    border-right: 1px solid #000000;
+}
+
+#menu > li:last {
+    border-right: none;
 }
