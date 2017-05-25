@@ -37,3 +37,7 @@ body {
     color: white;
     list-style-type: none;
 }
+
+#menu > li {
+    display: inline;
+}
