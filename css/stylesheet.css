@@ -40,9 +40,6 @@ body {
 
 #menu > li {
     display: inline;
+    padding-right: 5px;
     border-right: 1px solid white;
-}
-
-#menu:last-child {
-    border-right: none;
 }
