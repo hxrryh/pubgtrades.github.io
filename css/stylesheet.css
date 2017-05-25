@@ -39,11 +39,14 @@ body {
 }
 
 #menu > li {
-    font-family: 'Arial Black', sans-serif;
     display: inline;
     padding-right: 5px;
     border-right: 1px solid white;
     font-size: 150%;
+}
+
+#menu > li > a {
+    font-family: 'Arial Black', sans-serif;
 }
 
 a {
