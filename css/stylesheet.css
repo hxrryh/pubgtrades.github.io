@@ -13,7 +13,7 @@ body {
 }
 
 #header {
-    font-family: 'Inconsolata', monospace;
+    font-family: "Arial Black", Gadget, sans-serif;
     font-size: 500%;
     color: white;
     -webkit-text-stroke: 2px black;
