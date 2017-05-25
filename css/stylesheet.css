@@ -44,3 +44,8 @@ body {
     border-right: 1px solid white;
     font-size: 150%;
 }
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
