@@ -15,7 +15,7 @@ body {
 #header {
     font-family: 'Arial Black', sans-serif;
     font-size: 300%;
-    color: white;
+    color: black;
     -webkit-text-stroke: 0px black;
     display: inline-block;
 }
@@ -29,20 +29,20 @@ body {
 #subheader {
     font-family: 'Arial Black', sans-serif;
     font-size: 150%;
-    color: white;
+    color: black;
     -webkit-text-stroke: 0px black;
     margin: 30px;
 }
 
 #menu {
-    color: white;
+    color: black;
     list-style-type: none;
 }
 
 #menu > li {
     display: inline;
     padding-right: 5px;
-    border-right: 1px solid white;
+    border-right: 1px solid black;
     font-size: 150%;
 }
 
