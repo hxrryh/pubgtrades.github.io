@@ -1,0 +1,141 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background: #222;
+}
+
+.loading-overlay {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loading-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding: 0 50px;
+}
+.loading-container:before {
+  content: 'loading';
+  display: block;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -250%;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  opacity: .8;
+}
+
+.loading-dot {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  margin-right: 15px;
+  -webkit-animation: dot 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
+          animation: dot 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
+}
+
+.loading-dot:nth-of-type(1) {
+  margin-right: 0;
+}
+
+.loading-dot:nth-of-type(2) {
+  -webkit-animation-delay: .175s;
+          animation-delay: .175s;
+}
+
+.loading-dot:nth-of-type(3) {
+  -webkit-animation-delay: .35s;
+          animation-delay: .35s;
+}
+
+@-webkit-keyframes dot {
+  0% {
+    -webkit-transform: translate3d(-1000%, 0, 0);
+            transform: translate3d(-1000%, 0, 0);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(1000%, 0, 0);
+            transform: translate3d(1000%, 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes dot {
+  0% {
+    -webkit-transform: translate3d(-1000%, 0, 0);
+            transform: translate3d(-1000%, 0, 0);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(1000%, 0, 0);
+            transform: translate3d(1000%, 0, 0);
+    opacity: 0;
+  }
+}
+
+    </style>
+</head>
+<body>
+​<div class="loading-overlay">
+    <div class="loading-container">
+      <div class="loading-dot"></div>
+      <div class="loading-dot"></div>
+      <div class="loading-dot"></div>
+    </div>
+  </div>
+</body>
+</html>
