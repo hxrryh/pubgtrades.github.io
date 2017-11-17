@@ -4,305 +4,861 @@
     <meta charset="UTF-8">
     <title>Harry</title>
     <style>
-@import url(https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
-* {
-  box-sizing: border-box;
-}
-
-html {
-  width: 100%;
-  height: 100%;
-}
-
 body {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-
-.clearfix {
-  zoom: 1;
-}
-.clearfix:before, .clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.clearfix:after {
-  clear: both;
-}
-
-body {
-  background: #2c3e50;
+  align-items: center;
+  height: 100vh;
+  background-color: #001524;
 }
 
 .container {
-  position: relative;
-  width: 10em;
-  height: 5em;
-  font-size: 50px;
-  overflow: hidden;
+  display: block;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
 }
 
-.wave {
-  border-width: 0.1em;
-  border-style: solid;
+.baton {
+  display: block;
+  height: 2px;
+  width: 70px;
+  background-color: #459fa5;
+  animation: scale 1.25s infinite linear;
+  -webkit-transform-origin: 0;
+  -moz-transform-origin: 0;
+  -ms-transform-origin: 0;
+  -o-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+.baton:before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 5px;
+  background-color: #f5a51c;
   position: absolute;
-  -webkit-animation: wave 1500ms infinite alternate;
-          animation: wave 1500ms infinite alternate;
-  -webkit-transform: rotate(-44.5deg);
-          transform: rotate(-44.5deg);
+  top: -2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
-.wave:nth-child(1) {
-  width: 9.5125em;
-  height: 9.5125em;
-  bottom: -4.75625em;
-  left: 0.24375em;
-  -webkit-animation-delay: 75ms;
-          animation-delay: 75ms;
-  border-color: transparent transparent #1abc9c #1abc9c;
-  border-radius: 9.5125em;
-}
-.wave:nth-child(2) {
-  width: 9.025em;
-  height: 9.025em;
-  bottom: -4.5125em;
-  left: 0.4875em;
-  -webkit-animation-delay: 150ms;
-          animation-delay: 150ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.90476) rgba(26, 188, 156, 0.90476);
-  border-radius: 9.025em;
-}
-.wave:nth-child(3) {
-  width: 8.5375em;
-  height: 8.5375em;
-  bottom: -4.26875em;
-  left: 0.73125em;
-  -webkit-animation-delay: 225ms;
-          animation-delay: 225ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.85714) rgba(26, 188, 156, 0.85714);
-  border-radius: 8.5375em;
-}
-.wave:nth-child(4) {
-  width: 8.05em;
-  height: 8.05em;
-  bottom: -4.025em;
-  left: 0.975em;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.80952) rgba(26, 188, 156, 0.80952);
-  border-radius: 8.05em;
-}
-.wave:nth-child(5) {
-  width: 7.5625em;
-  height: 7.5625em;
-  bottom: -3.78125em;
-  left: 1.21875em;
-  -webkit-animation-delay: 375ms;
-          animation-delay: 375ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.7619) rgba(26, 188, 156, 0.7619);
-  border-radius: 7.5625em;
-}
-.wave:nth-child(6) {
-  width: 7.075em;
-  height: 7.075em;
-  bottom: -3.5375em;
-  left: 1.4625em;
-  -webkit-animation-delay: 450ms;
-          animation-delay: 450ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.71429) rgba(26, 188, 156, 0.71429);
-  border-radius: 7.075em;
-}
-.wave:nth-child(7) {
-  width: 6.5875em;
-  height: 6.5875em;
-  bottom: -3.29375em;
-  left: 1.70625em;
-  -webkit-animation-delay: 525ms;
-          animation-delay: 525ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.66667) rgba(26, 188, 156, 0.66667);
-  border-radius: 6.5875em;
-}
-.wave:nth-child(8) {
-  width: 6.1em;
-  height: 6.1em;
-  bottom: -3.05em;
-  left: 1.95em;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.61905) rgba(26, 188, 156, 0.61905);
-  border-radius: 6.1em;
-}
-.wave:nth-child(9) {
-  width: 5.6125em;
-  height: 5.6125em;
-  bottom: -2.80625em;
-  left: 2.19375em;
-  -webkit-animation-delay: 675ms;
-          animation-delay: 675ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.57143) rgba(26, 188, 156, 0.57143);
-  border-radius: 5.6125em;
-}
-.wave:nth-child(10) {
-  width: 5.125em;
-  height: 5.125em;
-  bottom: -2.5625em;
-  left: 2.4375em;
-  -webkit-animation-delay: 750ms;
-          animation-delay: 750ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.52381) rgba(26, 188, 156, 0.52381);
-  border-radius: 5.125em;
-}
-.wave:nth-child(11) {
-  width: 4.6375em;
-  height: 4.6375em;
-  bottom: -2.31875em;
-  left: 2.68125em;
-  -webkit-animation-delay: 825ms;
-          animation-delay: 825ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.47619) rgba(26, 188, 156, 0.47619);
-  border-radius: 4.6375em;
-}
-.wave:nth-child(12) {
-  width: 4.15em;
-  height: 4.15em;
-  bottom: -2.075em;
-  left: 2.925em;
-  -webkit-animation-delay: 900ms;
-          animation-delay: 900ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.42857) rgba(26, 188, 156, 0.42857);
-  border-radius: 4.15em;
-}
-.wave:nth-child(13) {
-  width: 3.6625em;
-  height: 3.6625em;
-  bottom: -1.83125em;
-  left: 3.16875em;
-  -webkit-animation-delay: 975ms;
-          animation-delay: 975ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.38095) rgba(26, 188, 156, 0.38095);
-  border-radius: 3.6625em;
-}
-.wave:nth-child(14) {
-  width: 3.175em;
-  height: 3.175em;
-  bottom: -1.5875em;
-  left: 3.4125em;
-  -webkit-animation-delay: 1050ms;
-          animation-delay: 1050ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.33333) rgba(26, 188, 156, 0.33333);
-  border-radius: 3.175em;
-}
-.wave:nth-child(15) {
-  width: 2.6875em;
-  height: 2.6875em;
-  bottom: -1.34375em;
-  left: 3.65625em;
-  -webkit-animation-delay: 1125ms;
-          animation-delay: 1125ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.28571) rgba(26, 188, 156, 0.28571);
-  border-radius: 2.6875em;
-}
-.wave:nth-child(16) {
-  width: 2.2em;
-  height: 2.2em;
-  bottom: -1.1em;
-  left: 3.9em;
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.2381) rgba(26, 188, 156, 0.2381);
-  border-radius: 2.2em;
-}
-.wave:nth-child(17) {
-  width: 1.7125em;
-  height: 1.7125em;
-  bottom: -0.85625em;
-  left: 4.14375em;
-  -webkit-animation-delay: 1275ms;
-          animation-delay: 1275ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.19048) rgba(26, 188, 156, 0.19048);
-  border-radius: 1.7125em;
-}
-.wave:nth-child(18) {
-  width: 1.225em;
-  height: 1.225em;
-  bottom: -0.6125em;
-  left: 4.3875em;
-  -webkit-animation-delay: 1350ms;
-          animation-delay: 1350ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.14286) rgba(26, 188, 156, 0.14286);
-  border-radius: 1.225em;
-}
-.wave:nth-child(19) {
-  width: 0.7375em;
-  height: 0.7375em;
-  bottom: -0.36875em;
-  left: 4.63125em;
-  -webkit-animation-delay: 1425ms;
-          animation-delay: 1425ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.09524) rgba(26, 188, 156, 0.09524);
-  border-radius: 0.7375em;
-}
-.wave:nth-child(20) {
-  width: 0.25em;
-  height: 0.25em;
-  bottom: -0.125em;
-  left: 4.875em;
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
-  border-color: transparent transparent rgba(26, 188, 156, 0.04762) rgba(26, 188, 156, 0.04762);
-  border-radius: 0.25em;
+.baton:after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 5px;
+  background-color: #f5a51c;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 
-@-webkit-keyframes wave {
-  to {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+.metronome {
+  -webkit-transform-origin: 0;
+  -moz-transform-origin: 0;
+  -ms-transform-origin: 0;
+  -o-transform-origin: 0;
+  transform-origin: 0;
+  animation: metronome 1.25s infinite linear;
+}
+
+.baton-0 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+}
+.baton-0 .baton, .baton-0 .baton:after, .baton-0 .metronome {
+  animation-delay: 0s;
+}
+
+.baton-1 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+}
+.baton-1 .baton, .baton-1 .baton:after, .baton-1 .metronome {
+  animation-delay: -0.14s;
+}
+
+.baton-2 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+}
+.baton-2 .baton, .baton-2 .baton:after, .baton-2 .metronome {
+  animation-delay: -0.28s;
+}
+
+.baton-3 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+}
+.baton-3 .baton, .baton-3 .baton:after, .baton-3 .metronome {
+  animation-delay: -0.42s;
+}
+
+.baton-4 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+}
+.baton-4 .baton, .baton-4 .baton:after, .baton-4 .metronome {
+  animation-delay: -0.56s;
+}
+
+.baton-5 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(50deg);
+  -moz-transform: rotate(50deg);
+  -ms-transform: rotate(50deg);
+  -o-transform: rotate(50deg);
+}
+.baton-5 .baton, .baton-5 .baton:after, .baton-5 .metronome {
+  animation-delay: -0.7s;
+}
+
+.baton-6 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+}
+.baton-6 .baton, .baton-6 .baton:after, .baton-6 .metronome {
+  animation-delay: -0.84s;
+}
+
+.baton-7 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(70deg);
+  -moz-transform: rotate(70deg);
+  -ms-transform: rotate(70deg);
+  -o-transform: rotate(70deg);
+}
+.baton-7 .baton, .baton-7 .baton:after, .baton-7 .metronome {
+  animation-delay: -0.98s;
+}
+
+.baton-8 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(80deg);
+  -moz-transform: rotate(80deg);
+  -ms-transform: rotate(80deg);
+  -o-transform: rotate(80deg);
+}
+.baton-8 .baton, .baton-8 .baton:after, .baton-8 .metronome {
+  animation-delay: -1.12s;
+}
+
+.baton-9 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+.baton-9 .baton, .baton-9 .baton:after, .baton-9 .metronome {
+  animation-delay: -1.26s;
+}
+
+.baton-10 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(100deg);
+  -moz-transform: rotate(100deg);
+  -ms-transform: rotate(100deg);
+  -o-transform: rotate(100deg);
+}
+.baton-10 .baton, .baton-10 .baton:after, .baton-10 .metronome {
+  animation-delay: -1.4s;
+}
+
+.baton-11 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(110deg);
+  -moz-transform: rotate(110deg);
+  -ms-transform: rotate(110deg);
+  -o-transform: rotate(110deg);
+}
+.baton-11 .baton, .baton-11 .baton:after, .baton-11 .metronome {
+  animation-delay: -1.54s;
+}
+
+.baton-12 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+}
+.baton-12 .baton, .baton-12 .baton:after, .baton-12 .metronome {
+  animation-delay: -1.68s;
+}
+
+.baton-13 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(130deg);
+  -moz-transform: rotate(130deg);
+  -ms-transform: rotate(130deg);
+  -o-transform: rotate(130deg);
+}
+.baton-13 .baton, .baton-13 .baton:after, .baton-13 .metronome {
+  animation-delay: -1.82s;
+}
+
+.baton-14 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(140deg);
+  -moz-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+}
+.baton-14 .baton, .baton-14 .baton:after, .baton-14 .metronome {
+  animation-delay: -1.96s;
+}
+
+.baton-15 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  -o-transform: rotate(150deg);
+}
+.baton-15 .baton, .baton-15 .baton:after, .baton-15 .metronome {
+  animation-delay: -2.1s;
+}
+
+.baton-16 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(160deg);
+  -moz-transform: rotate(160deg);
+  -ms-transform: rotate(160deg);
+  -o-transform: rotate(160deg);
+}
+.baton-16 .baton, .baton-16 .baton:after, .baton-16 .metronome {
+  animation-delay: -2.24s;
+}
+
+.baton-17 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(170deg);
+  -moz-transform: rotate(170deg);
+  -ms-transform: rotate(170deg);
+  -o-transform: rotate(170deg);
+}
+.baton-17 .baton, .baton-17 .baton:after, .baton-17 .metronome {
+  animation-delay: -2.38s;
+}
+
+.baton-18 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.baton-18 .baton, .baton-18 .baton:after, .baton-18 .metronome {
+  animation-delay: -2.52s;
+}
+
+.baton-19 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(190deg);
+  -moz-transform: rotate(190deg);
+  -ms-transform: rotate(190deg);
+  -o-transform: rotate(190deg);
+}
+.baton-19 .baton, .baton-19 .baton:after, .baton-19 .metronome {
+  animation-delay: -2.66s;
+}
+
+.baton-20 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(200deg);
+  -moz-transform: rotate(200deg);
+  -ms-transform: rotate(200deg);
+  -o-transform: rotate(200deg);
+}
+.baton-20 .baton, .baton-20 .baton:after, .baton-20 .metronome {
+  animation-delay: -2.8s;
+}
+
+.baton-21 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(210deg);
+  -moz-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  -o-transform: rotate(210deg);
+}
+.baton-21 .baton, .baton-21 .baton:after, .baton-21 .metronome {
+  animation-delay: -2.94s;
+}
+
+.baton-22 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(220deg);
+  -moz-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
+  -o-transform: rotate(220deg);
+}
+.baton-22 .baton, .baton-22 .baton:after, .baton-22 .metronome {
+  animation-delay: -3.08s;
+}
+
+.baton-23 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(230deg);
+  -moz-transform: rotate(230deg);
+  -ms-transform: rotate(230deg);
+  -o-transform: rotate(230deg);
+}
+.baton-23 .baton, .baton-23 .baton:after, .baton-23 .metronome {
+  animation-delay: -3.22s;
+}
+
+.baton-24 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(240deg);
+  -moz-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  -o-transform: rotate(240deg);
+}
+.baton-24 .baton, .baton-24 .baton:after, .baton-24 .metronome {
+  animation-delay: -3.36s;
+}
+
+.baton-25 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(250deg);
+  -moz-transform: rotate(250deg);
+  -ms-transform: rotate(250deg);
+  -o-transform: rotate(250deg);
+}
+.baton-25 .baton, .baton-25 .baton:after, .baton-25 .metronome {
+  animation-delay: -3.5s;
+}
+
+.baton-26 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(260deg);
+  -moz-transform: rotate(260deg);
+  -ms-transform: rotate(260deg);
+  -o-transform: rotate(260deg);
+}
+.baton-26 .baton, .baton-26 .baton:after, .baton-26 .metronome {
+  animation-delay: -3.64s;
+}
+
+.baton-27 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+}
+.baton-27 .baton, .baton-27 .baton:after, .baton-27 .metronome {
+  animation-delay: -3.78s;
+}
+
+.baton-28 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(280deg);
+  -moz-transform: rotate(280deg);
+  -ms-transform: rotate(280deg);
+  -o-transform: rotate(280deg);
+}
+.baton-28 .baton, .baton-28 .baton:after, .baton-28 .metronome {
+  animation-delay: -3.92s;
+}
+
+.baton-29 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(290deg);
+  -moz-transform: rotate(290deg);
+  -ms-transform: rotate(290deg);
+  -o-transform: rotate(290deg);
+}
+.baton-29 .baton, .baton-29 .baton:after, .baton-29 .metronome {
+  animation-delay: -4.06s;
+}
+
+.baton-30 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(300deg);
+  -moz-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  -o-transform: rotate(300deg);
+}
+.baton-30 .baton, .baton-30 .baton:after, .baton-30 .metronome {
+  animation-delay: -4.2s;
+}
+
+.baton-31 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(310deg);
+  -moz-transform: rotate(310deg);
+  -ms-transform: rotate(310deg);
+  -o-transform: rotate(310deg);
+}
+.baton-31 .baton, .baton-31 .baton:after, .baton-31 .metronome {
+  animation-delay: -4.34s;
+}
+
+.baton-32 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(320deg);
+  -moz-transform: rotate(320deg);
+  -ms-transform: rotate(320deg);
+  -o-transform: rotate(320deg);
+}
+.baton-32 .baton, .baton-32 .baton:after, .baton-32 .metronome {
+  animation-delay: -4.48s;
+}
+
+.baton-33 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(330deg);
+  -moz-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  -o-transform: rotate(330deg);
+}
+.baton-33 .baton, .baton-33 .baton:after, .baton-33 .metronome {
+  animation-delay: -4.62s;
+}
+
+.baton-34 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(340deg);
+  -moz-transform: rotate(340deg);
+  -ms-transform: rotate(340deg);
+  -o-transform: rotate(340deg);
+}
+.baton-34 .baton, .baton-34 .baton:after, .baton-34 .metronome {
+  animation-delay: -4.76s;
+}
+
+.baton-35 {
+  height: 1px;
+  width: 150px;
+  position: absolute;
+  top: calc(50% - 8px);
+  -webkit-transform-origin: 100%;
+  -moz-transform-origin: 100%;
+  -ms-transform-origin: 100%;
+  -o-transform-origin: 100%;
+  transform-origin: 100%;
+  -webkit-transform: rotate(350deg);
+  -moz-transform: rotate(350deg);
+  -ms-transform: rotate(350deg);
+  -o-transform: rotate(350deg);
+}
+.baton-35 .baton, .baton-35 .baton:after, .baton-35 .metronome {
+  animation-delay: -4.9s;
+}
+
+@keyframes metronome {
+  0% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+  }
+  50% {
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
+    transform: rotate(25deg);
+  }
+  100% {
+    -webkit-transform: rotate(-25deg);
+    -moz-transform: rotate(-25deg);
+    -ms-transform: rotate(-25deg);
+    -o-transform: rotate(-25deg);
+    transform: rotate(-25deg);
   }
 }
-
-@keyframes wave {
-  to {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+@keyframes scale {
+  0% {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  25% {
+    -webkit-transform: scaleX(0.74);
+    -moz-transform: scaleX(0.74);
+    -ms-transform: scaleX(0.74);
+    -o-transform: scaleX(0.74);
+    transform: scaleX(0.74);
+  }
+  50% {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  75% {
+    -webkit-transform: scaleX(1.16);
+    -moz-transform: scaleX(1.16);
+    -ms-transform: scaleX(1.16);
+    -o-transform: scaleX(1.16);
+    transform: scaleX(1.16);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 
     </style>
 </head>
 <body>
-<div class='container'>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
-  <div class='wave'></div>
+<div class="container">
+			<div class="baton-0"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-1"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-2"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-3"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-4"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-5"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-6"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-7"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-8"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-9"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-10"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-11"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-12"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-13"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-14"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-15"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-16"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-17"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-18"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-19"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-20"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-21"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-22"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-23"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-24"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-25"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-26"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-27"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-28"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-29"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-30"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-31"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-32"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-33"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-34"><div class="metronome"><div class="baton"></div></div></div>
+			<div class="baton-35"><div class="metronome"><div class="baton"></div></div></div>
 </div>
 </body>
 </html>
