@@ -4,114 +4,200 @@
     <meta charset="UTF-8">
     <title>Harry</title>
     <style>
-* {
+.loading {
+    -moz-animation: loading 8s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+    -webkit-animation: loading 8s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+  animation: loading 8s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite;
+}
+.loading,
+.loading:before,
+.loading:after {
+  background: #e12a44;
   box-sizing: border-box;
-}
-
-html,
-body {
-  background-color: #FEDCC8;
-}
-
-.parallax {
-  -webkit-perspective: 100px;
-          perspective: 100px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: absolute;
-  top: 0;
+  display: block;
+  font: 0/0 a;
+  height: 40px;
   left: 50%;
-  right: 0;
-  bottom: 0;
-  margin-left: -1500px;
-}
-
-.parallax__layer {
+  margin: -20px 0 0 -5px;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 50%;
+  width: 8px;
 }
-.parallax__layer img {
+.loading:before,
+.loading:after{
+  content: '';
   display: block;
   position: absolute;
-  bottom: 0;
+    -webkit-transform: rotate(0deg);
+  left: -10px
+}
+.loading:after {
+  left: auto;
+  right: -15px;
 }
 
-.parallax__cover {
-  background: #2D112B;
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 2000px;
-  z-index: 2;
+  @-moz-keyframes 'loading' {
+    0% {
+      -moz-transform: rotate(0deg);
+    }
+	  7.5% {
+	    -moz-transform: rotate(0deg);
+	  }
+	  12.5% {
+	    -moz-transform: rotate(90deg);
+	  }
+	  20% {
+	    -moz-transform: rotate(90deg);
+	  }
+	  25% {
+	    -moz-transform: rotate(180deg);
+	  }
+	  32.5% {
+	    -moz-transform: rotate(180deg);
+	  }
+	  37.5% {
+	    -moz-transform: rotate(270deg);
+	  }
+	  45% {
+	    -moz-transform: rotate(270deg);
+	  }
+	  50% {
+	    -moz-transform: rotate(180deg);
+	  }
+	  57.5% {
+	    -moz-transform: rotate(180deg);    
+	  }
+	  62.5% {
+	    -moz-transform: rotate(270deg);
+	  }
+	  70% {
+	    -moz-transform: rotate(270deg);
+	  }
+	  75% {
+	    -moz-transform: rotate(360deg);
+	  }
+	  82.5% {
+	    -moz-transform: rotate(360deg);
+	  }
+	  87.5% {
+	    -moz-transform: rotate(270deg);
+	  }
+	  95% {
+	    -moz-transform: rotate(270deg);
+	  }
+	  100% {
+	    -moz-transform: rotate(360deg);
+	  }
+	}
+	@-webkit-keyframes 'loading' {
+	  0% {
+	    -webkit-transform: rotate(0deg);
+	  }
+	  7.5% {
+	    -webkit-transform: rotate(0deg);
+	  }
+	  12.5% {
+	    -webkit-transform: rotate(90deg);
+	  }
+	  20% {
+	    -webkit-transform: rotate(90deg);
+	  }
+	  25% {
+	    -webkit-transform: rotate(180deg);
+	  }
+	  32.5% {
+	    -webkit-transform: rotate(180deg);
+	  }
+	  37.5% {
+	    -webkit-transform: rotate(270deg);
+	  }
+	  45% {
+	    -webkit-transform: rotate(270deg);
+	  }
+	  50% {
+	    -webkit-transform: rotate(180deg);
+	  }
+	  57.5% {
+	    -webkit-transform: rotate(180deg);    
+	  }
+	  62.5% {
+	    -webkit-transform: rotate(270deg);
+	  }
+	  70% {
+	    -webkit-transform: rotate(270deg);
+	  }
+	  75% {
+	    -webkit-transform: rotate(360deg);
+	  }
+	  82.5% {
+	    -webkit-transform: rotate(360deg);
+	  }
+	  87.5% {
+	    -webkit-transform: rotate(270deg);
+	  }
+	  95% {
+	    -webkit-transform: rotate(270deg);
+	  }
+	  100% {
+	    -webkit-transform: rotate(360deg);
+	  }
+	}
+@keyframes 'loading' {
+  0% {
+    transform: rotate(0deg);
+  }
+  7.5% {
+    transform: rotate(0deg);
+  }
+  12.5% {
+    transform: rotate(90deg);
+  }
+  20% {
+    transform: rotate(90deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  32.5% {
+    transform: rotate(180deg);
+  }
+  37.5% {
+    transform: rotate(270deg);
+  }
+  45% {
+    transform: rotate(270deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  57.5% {
+    transform: rotate(180deg);    
+  }
+  62.5% {
+    transform: rotate(270deg);
+  }
+  70% {
+    transform: rotate(270deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  82.5% {
+    transform: rotate(360deg);
+  }
+  87.5% {
+    transform: rotate(270deg);
+  }
+  95% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
-.parallax__layer__0 {
-  -webkit-transform: translateZ(-300px) scale(4);
-          transform: translateZ(-300px) scale(4);
-}
-
-.parallax__layer__1 {
-  -webkit-transform: translateZ(-250px) scale(3.5);
-          transform: translateZ(-250px) scale(3.5);
-}
-
-.parallax__layer__2 {
-  -webkit-transform: translateZ(-200px) scale(3);
-          transform: translateZ(-200px) scale(3);
-}
-
-.parallax__layer__3 {
-  -webkit-transform: translateZ(-150px) scale(2.5);
-          transform: translateZ(-150px) scale(2.5);
-}
-
-.parallax__layer__4 {
-  -webkit-transform: translateZ(-100px) scale(2);
-          transform: translateZ(-100px) scale(2);
-}
-
-.parallax__layer__5 {
-  -webkit-transform: translateZ(-50px) scale(1.5);
-          transform: translateZ(-50px) scale(1.5);
-}
-
-.parallax__layer__6 {
-  -webkit-transform: translateZ(0px) scale(1);
-          transform: translateZ(0px) scale(1);
-}
-
     </style>
 </head>
 <body>
-<div class="parallax">
-    <div class="parallax__layer parallax__layer__0">
-        <img src="https://sam.beckham.io/images/articles/firewatch/layer_0.png" />
-    </div>
-    <div class="parallax__layer parallax__layer__1">
-        <img src="https://sam.beckham.io/images/articles/firewatch/layer_1.png" />
-    </div>
-    <div class="parallax__layer parallax__layer__2">
-        <img src="https://sam.beckham.io/images/articles/firewatch/layer_2.png" />
-    </div>
-    <div class="parallax__layer parallax__layer__3">
-        <img src="https://sam.beckham.io/images/articles/firewatch/layer_3.png" />
-    </div>
-    <div class="parallax__layer parallax__layer__4">
-        <img src="https://sam.beckham.io/images/articles/firewatch/layer_4.png" />
-    </div>
-    <div class="parallax__layer parallax__layer__5">
-        <img src="https://sam.beckham.io/images/articles/firewatch/layer_5.png" />
-    </div>
-    <div class="parallax__layer parallax__layer__6">
-        <img src="https://sam.beckham.io/images/articles/firewatch/layer_6.png" />
-    </div>
-    <div class="parallax__cover"></div>
-</div>
+<strong class="loading">Loading…</strong>
 </body>
 </html>
